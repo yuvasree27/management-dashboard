@@ -1,38 +1,344 @@
 .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: #007bff;
+  color: rgb(42, 179, 221);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button:hover {
+  background-color: #0056b3;
+}
+
+.add-user-button {
+  background-color: #28a745;
+  margin-bottom: 20px;
+}
+
+.add-user-button:hover {
+  background-color: #218838;
+}
+
+.form-card {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form label {
+  margin-top: 10px;
+}
+
+.user-form input {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.user-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .form-card {
+    padding: 10px;
   }
 }
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+/* Style for User List */
+.user-list {
+  margin-top: 20px;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-actions {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color:whitesmoke;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+Edit Button 
+button:first-child {
+  color: #4CAF50;
+}
+
+button:first-child:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ Delete Button 
+button:last-child {
+  color: #f44336;
+}
+
+button:last-child:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-user-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-user-button:hover {
+  background-color: #45a049;
+}
+
+.form-card {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 400px;
+  background-color: #f9f9f9;
+}
+
+
+.App {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+}
+
+/* Styling for the header */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button for adding a new user */
+.add-user-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-user-button:hover {
+  background-color: #45a049;
+}
+
+/* Form Card Styling */
+.form-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for form labels and inputs */
+.user-form label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.user-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-form input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Action buttons */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-actions button[type="button"] {
+  background-color: #f44336;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-actions button:hover {
+  opacity: 0.8;
+}
+
+.user-list {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-list th,
+.user-list td {
+  text-align: left;
+  padding: 12px;
+}
+
+.user-list th {
+  background-color: #f2f2f2;
+}
+
+.user-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Icons for edit and delete buttons */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button .fa {
+  font-size: 18px;
+  color: #333;
+}
+
+.icon-button:hover .fa {
+  color: #4CAF50;
 }
